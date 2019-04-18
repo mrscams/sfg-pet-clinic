@@ -1,4 +1,4 @@
-package guur.springframework.sfgpetclinic.model;
+package guru.springframework.sfgpetclinic.model;
 
 
 import java.time.LocalDate;
@@ -8,11 +8,11 @@ public class Pet {
     private Owner owner;
     private LocalDate  birthDate;
 
-    public guur.springframework.sfgpetclinic.model.petType getPetType() {
+    public guru.springframework.sfgpetclinic.model.petType getPetType() {
         return petType;
     }
 
-    public void setPetType(guur.springframework.sfgpetclinic.model.petType petType) {
+    public void setPetType(guru.springframework.sfgpetclinic.model.petType petType) {
         this.petType = petType;
     }
 
