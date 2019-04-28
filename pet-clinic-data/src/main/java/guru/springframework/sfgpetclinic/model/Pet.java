@@ -8,26 +8,25 @@ import java.util.Set;
 
 @Entity
 @Table(name = "pets")
-public class Pet extends  BaseEntity {
+public class Pet extends BaseEntity {
 
-    @Column(name =  "name")
+    @Column(name = "name")
     private String name;
 
-    @Column(name = "pet_type")
     @ManyToOne
     @JoinColumn(name = "type_id")
     private PetType petType;
 
-    @Column
+
     @ManyToOne
     @JoinColumn(name = "owner_id")
     private Owner owner;
 
     @Column(name = "birth_date")
-    private LocalDate  birthDate;
+    private LocalDate birthDate;
 
     @OneToMany(mappedBy = "pet", cascade = CascadeType.ALL)
-    private Set<Visit>  visits = new HashSet<>();
+    private Set<Visit> visits = new HashSet<>();
 
     public String getName() {
         return name;
